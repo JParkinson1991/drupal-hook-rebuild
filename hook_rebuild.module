@@ -1,0 +1,25 @@
+<?php
+/**
+ * @file
+ * Module File.
+ * Module: hook_rebuild
+ *
+ * @author Josh Parkinson
+ */
+
+/**
+ * Attach the hook_rebuild invocation to the end of the flush caches event.
+ *
+ * @see hook_flush_caches()
+ *
+ * @return array
+ *     Return an empty array as this module provides no cache bins that need
+ *     clearning.
+ */
+function hook_rebuild_flush_caches(){
+    register_shutdown_function(function(){
+        module_invoke_all('rebuild');
+    });
+
+    return array();
+}
