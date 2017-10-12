@@ -1,10 +1,9 @@
 <?php
+
 /**
  * @file
  * Module File.
- * Module: hook_rebuild
- *
- * @author Josh Parkinson
+ * Module: hook_rebuild.
  */
 
 /**
@@ -13,13 +12,13 @@
  * @see hook_flush_caches()
  *
  * @return array
- *     Return an empty array as this module provides no cache bins that need
- *     clearning.
+ *   Return an empty array as this module provides no cache bins that need
+ *   clearning.
  */
-function hook_rebuild_flush_caches(){
-    register_shutdown_function(function(){
-        module_invoke_all('rebuild');
-    });
+function hook_rebuild_flush_caches() {
+  register_shutdown_function(function() {
+    module_invoke_all('rebuild');
+  });
 
-    return array();
+  return array();
 }

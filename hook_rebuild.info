@@ -1,6 +1,5 @@
 ; Module Details
 name = Hook Rebuild
 description = Provides a hook_rebuild implementation for Drupal 7 applications.
-version = 1.0
 core = 7.x
 package = Drupal 8 Polyfills
