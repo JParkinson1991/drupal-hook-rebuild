@@ -15,7 +15,7 @@
  *   clearning.
  */
 function hook_rebuild_flush_caches() {
-  register_shutdown_function(function (){
+  register_shutdown_function(function () {
     module_invoke_all('rebuild');
   });
 
