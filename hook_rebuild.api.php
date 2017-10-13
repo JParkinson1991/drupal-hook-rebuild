@@ -2,8 +2,7 @@
 
 /**
  * @file
- * Module API File.
- * Module: hook_rebuild.
+ * Module API File. | Module: hook_rebuild.
  *
  * Outlines usages of hooks created by this module.
  */
